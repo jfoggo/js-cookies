@@ -33,10 +33,18 @@ import Cookies from './cookies.js';
 Cookies.set('username', 'JohnDoe');
 ```
 
-Set with a custom expiration (in days):
+Set with a **custom expiration** (in days):
 
 ```js
 Cookies.set('sessionToken', 'abc123', 7);
+```
+
+Set with a **custom path**:
+- You can set cookies for other paths (outside of current page)
+- But `Cookies.get(cname)` will only return cookies for current page/path
+
+```js
+Cookies.set('sessionToken', 'abc123', 7, '/index.html');
 ```
 
 ### Get a cookie

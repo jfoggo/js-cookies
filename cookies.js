@@ -1,11 +1,11 @@
 export class Cookies {
 
     // Save new cookie
-    static set(cname, cvalue, exdays = 365) {
+    static set(cname, cvalue, exdays = 365, path = "/") {
         const d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 
-        const cookie = `${cname}=${cvalue};expires=${d.toUTCString()};path=/`;
+        const cookie = `${cname}=${cvalue};expires=${d.toUTCString()};path=${path}`;
         document.cookie = cookie;
     }
 
