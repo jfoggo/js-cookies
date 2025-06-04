@@ -1,7 +1,7 @@
 export class Cookies {
 
     // Save new cookie
-    static set(cname, cvalue, exdays = 365, path = "/") {
+    static set(cname, cvalue, exdays = 30, path = "/") {
         const d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
 
@@ -21,7 +21,7 @@ export class Cookies {
         return "";
     }
 
-    // Delete cookie (if exists)
+    // Delete cookie
     static del(cname) {
         Cookies.set(cname, "", 0);
     }
