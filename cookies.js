@@ -1,4 +1,4 @@
-class Cookies {
+export class Cookies {
 
     // Save new cookie
     static set(cname, cvalue, exdays = 365) {
