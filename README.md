@@ -5,8 +5,9 @@ A lightweight, vanilla JavaScript class for managing browser cookies with ease.
 ## Features
 
 * ✅ Set cookies with optional expiration
+* ✅ Set cookies for other paths
 * ✅ Get a cookie by name
-* ✅ Delete a cookie
+* ✅ Delete a cookie by name
 * ✅ Retrieve all cookies as key-value pairs
 * ✅ Get all cookie names (keys)
 * ✅ Get all cookie values (vals)
@@ -41,7 +42,7 @@ Cookies.set('sessionToken', 'abc123', 7);
 
 Set with a **custom path**:
 - You can set cookies for other paths (outside of current page)
-- But `Cookies.get(cname)` will only return cookies for current page/path
+- But `Cookies.get(cname)` will only return cookies for current page
 
 ```js
 Cookies.set('sessionToken', 'abc123', 7, '/index.html');
