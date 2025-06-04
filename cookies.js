@@ -45,7 +45,7 @@ export class Cookies {
     }
 
     // Retrieve all cookie values
-    static values() {
+    static vals() {
         const cookies = Cookies.all();
         return Object.values(cookies);
     }

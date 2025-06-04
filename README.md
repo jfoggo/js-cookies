@@ -9,7 +9,7 @@ A lightweight, vanilla JavaScript class for managing browser cookies with ease.
 * ✅ Delete a cookie
 * ✅ Retrieve all cookies as key-value pairs
 * ✅ Get all cookie names (keys)
-* ✅ Get all cookie values
+* ✅ Get all cookie values (vals)
 
 ## Installation
 
@@ -77,7 +77,7 @@ console.log(keys); // [ 'sessionToken' ]
 ### Get all cookie values
 
 ```js
-const values = Cookies.values();
+const values = Cookies.vals();
 console.log(values); // [ 'abc123' ]
 ```
 
