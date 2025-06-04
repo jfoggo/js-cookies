@@ -31,8 +31,8 @@ export class Cookies {
         const ca = document.cookie.split(';');
         const cookies = {};
         for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            let [cname, cvalue] = c.split('=').map(s => s.trim());
+            const c = ca[i];
+            const [cname, cvalue] = c.split('=').map(s => s.trim());
             cookies[cname] = cvalue;
         }
         return cookies;
@@ -40,26 +40,14 @@ export class Cookies {
 
     // Retrieve all cookie keys
     static keys() {
-        const ca = document.cookie.split(';');
-        const cookie_keys = [];
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            let [cname, cvalue] = c.split('=').map(s => s.trim());
-            cookie_keys.push(cname);
-        }
-        return cookie_keys;
+        const cookies = Cookies.all();
+        return Object.keys(cookies);
     }
 
     // Retrieve all cookie values
     static values() {
-        const ca = document.cookie.split(';');
-        const cookie_values = [];
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            let [cname, cvalue] = c.split('=').map(s => s.trim());
-            cookie_values.push(cvalue);
-        }
-        return cookie_values;
+        const cookies = Cookies.all();
+        return Object.values(cookies);
     }
 
 }
