@@ -84,10 +84,10 @@ console.log(values); // [ 'abc123' ]
 ## Notes
 
 * This class only manages cookies available to JavaScript on the current domain/path.
-* All cookies are set with `path=/` by default to be accessible site-wide.
 * Expired or HTTP-only cookies cannot be accessed by JavaScript.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
 You are free to use, modify, and distribute this code with proper attribution.
